@@ -26,6 +26,7 @@ function Examples() {
                                     title={element.title}
                                     index={index}
                                     ref={refs[index]}
+                                    key={index}
                                 />
                                 
                             )

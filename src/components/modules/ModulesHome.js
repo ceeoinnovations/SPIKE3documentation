@@ -22,15 +22,15 @@ function ModulesHome(props) {
         
         <Card 
             content={
-                <div className="p-4">  
+                <div className="p-4 w-72 lg:w-auto">  
                     <Breadcrumbs 
                         currentPage={props.currentPage}
                         setCurrentPage={props.setCurrentPage}
                         className="ml-6"
                     /> 
-                    <h1 className="text-center text-3xl font-semibold my-4 ">SPIKE 3 Modules</h1>
+                    <h1 className="text-center text-3xl font-semibold my-4 text-blue-500">SPIKE 3 Modules</h1>
                     {/* 3 Column Grid Format, change num of cols using function and classes*/}
-                    <div className="my-4 grid grid-cols-3">
+                    <div className="hidden lg:my-4 lg:grid lg:grid-cols-3">
                     {
                         chunkArray(docs.modules, 3).map((element, index) => {
                             return (
@@ -56,6 +56,25 @@ function ModulesHome(props) {
                         })
                     }
                     </div>
+
+                    {/* 1 Column for Mobile Devices */}
+                    {
+                        docs.modules.map((element, index) => {
+                            return (
+                                <div 
+                                className="lg:hidden flex justify-center my-6"
+                                key={index}>
+                                <button 
+                                className="btn mx-6 block"
+                                
+                                onClick={() => 
+                                props.setCurrentPage("Modules " + element.moduleName)}
+                                >{element.moduleName}</button>
+                                <br></br>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             
             }

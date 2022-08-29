@@ -13,7 +13,7 @@ const hub = {
             code: `import hub
 
 # Get battery voltage (mV)  
-getBatteryVoltage`
+hub.getBatteryVoltage()`
         },
 
         {
@@ -106,7 +106,9 @@ hub.device_uuid()`
 
 
 
-    ]
+    ],
+
+    constants: []
 
 }
 

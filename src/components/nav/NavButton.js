@@ -3,7 +3,7 @@ import {Button} from "react-daisyui";
 
 function NavButton(props) {
     return (
-        <div className="inline-block">
+        <div className={"inline-block " + props.className}>
             <Button className="btn btn-md mx-2" color="ghost" onClick={props.onClick}>
                 {props.value}
             </Button>

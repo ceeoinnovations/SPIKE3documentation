@@ -173,7 +173,9 @@ uos.statvfs("main.py")`
         },
 
         
-    ]
+    ],
+
+    constants: []
 }
 
 export default uos;

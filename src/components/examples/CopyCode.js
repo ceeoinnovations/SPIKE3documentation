@@ -20,10 +20,6 @@ function CopyCode(props) {
                 </button>
             </div>
             
-            <button 
-                className="btn btn-xs mr-4"
-                onClick={() => window.open("https://pyrepl.web.app", '_blank')}
-            >Open PyREPL</button>
         </div>
     )
 }

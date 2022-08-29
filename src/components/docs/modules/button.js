@@ -23,8 +23,32 @@ btn = {
 }
 
 # Prints if the left button is pressed or not
-print(button.button_isPressed(Button.BUTTON_LEFT)[0] == 1)`
+print(button.button_isPressed(button.BUTTON_LEFT)[0] == 1)`,
+
+            fullCode: `import button, util
+
+btn = {
+    0:'power',
+    1:'left',
+    2:'right',
+    3:'connect',
+}
+
+async def main():
+    # Prints if the left button is pressed or not
+    print(button.button_isPressed(button.BUTTON_LEFT)[0] == 1)
+    
+    
+util.run(main())`
         }
+    ],
+
+    constants: [
+        "BUTTON_ON_OFF -- 0",
+        "BUTTON_LEFT -- 1",
+        "BUTTON_RIGHT -- 2",
+        "BUTTON_CONNECT -- 3"
+
     ]
 }
 

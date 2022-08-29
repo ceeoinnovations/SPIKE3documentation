@@ -3,16 +3,11 @@ import React, {useRef} from "react";
 
 function CollapseTab(props) {
     return(
-        <div 
-            tabIndex="0" 
-            className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mx-4 my-4 z-0"
-            ref={props.ref}
-            onClick={props.onClick}
-        >
-            <div className="collapse-title text-xl font-medium">
+        <div className="mx-8">
+            <div className="font-medium text-xl my-6">
                 {props.title}
             </div>
-            <div className="collapse-content"> 
+            <div className="my-4 mb-4"> 
                 {props.content}
             </div>
         </div>

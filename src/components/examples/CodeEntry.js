@@ -10,7 +10,7 @@ function CodeEntry(props) {
                 {
                     (props.code.split("\n")).map((element, index) => {
                         return (
-                        <div>
+                        <div key={index}>
                             <pre data-prefix={index + 1}><code>{element}</code></pre>
                         </div>)
                     })

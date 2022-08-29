@@ -183,7 +183,47 @@ motor.motor_use_permyriads()`
 
 motor.motor_use_si_units()`
             },
-        ]
+        ],
+
+    constants: [
+        "MOTOR_READY -- 0",
+
+        "MOTOR_RUNNING -- 1",
+
+        "MOTOR_STALLED -- 2",
+
+        "MOTOR_ABORTED -- 3",
+
+        "MOTOR_REGULATION_ERROR -- 4",
+
+        "MOTOR_DISCONNECTED -- 5",
+
+        "MOTOR_END_STATE_COAST -- 0",
+
+        "MOTOR_END_STATE_BRAKE -- 1",
+
+        "MOTOR_END_STATE_HOLD -- 2",
+
+        "MOTOR_END_STATE_CONTINUE -- 3",
+
+        "MOTOR_END_STATE_SMART_COAST -- 4",
+
+        "MOTOR_MOVE_DIRECTION_CW -- 0",
+
+        "MOTOR_MOVE_DIRECTION_CCW -- 1",
+
+        "MOTOR_MOVE_DIRECTION_SHORTEST -- 2",
+
+        "MOTOR_MOVE_DIRECTION_LONGEST -- 3",
+
+        "MOTOR_ACCELERATION_LOWEST -- 0",
+
+        "MOTOR_ACCELERATION_LOW -- 1",
+
+        "MOTOR_ACCELERATION_NORMAL -- 2",
+
+        "MOTOR_ACCELERATION_HIGH -- 3"
+    ]
 };
 
 export default motor;

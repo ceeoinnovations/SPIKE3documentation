@@ -39,7 +39,7 @@ distance_sensor.get_pixel(port.PORTD, 1, 2)`
             returns: "Nothing",
             code: `import distance_sensor, port
 
-distance_sensor.set_pixel(port.PORTD, 1, 2)`
+distance_sensor.set_pixel(port.PORTD, 0, 0, 75)`
         },
 
         {
@@ -69,7 +69,9 @@ distance_sensor.set_pixels(port.PORTD, bytes([100,100,100,100]))`
 distance_sensor.clear(port.PORTD)`
         }
 
-    ]
+    ],
+
+    constants: []
 }
 
 export default distance_sensor;

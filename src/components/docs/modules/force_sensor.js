@@ -27,7 +27,9 @@ force_sensor.get_force(port.PORTE)`
 
 force_sensor.get_touch(port.PORTE)`
         },
-    ]
+    ],
+
+    constants: []
 }
 
 export default force_sensor;

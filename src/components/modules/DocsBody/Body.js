@@ -13,6 +13,8 @@ function Body(props) {
                                     function={element}
                                     currentPage={props.currentPage}
                                     setCurrentPage={props.setCurrentPage}
+                                    writeToPort={props.writeToPort}
+                                    getConsole={props.getConsole}
                                 />
                             );
                         })

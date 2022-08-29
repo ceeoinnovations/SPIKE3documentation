@@ -17,6 +17,7 @@ function ModuleDocs(props) {
                 <IndividualEntry
                     docs={docs}
                     currentPage={props.currentPage}
+                    writeToPort={props.writeToPort}
                 />
             )
         }
@@ -25,6 +26,8 @@ function ModuleDocs(props) {
                 docs={currentDocs}
                 currentPage={props.currentPage}
                 setCurrentPage={props.setCurrentPage}
+                writeToPort={props.writeToPort}
+                getConsole={props.getConsole}
             />
         )
     }
@@ -33,7 +36,7 @@ function ModuleDocs(props) {
         <div>
         <Card 
             content={
-                <div className="p-4">  
+                <div className="p-4 w-96 lg:w-auto">  
                     <Breadcrumbs 
                         currentPage={props.currentPage}
                         setCurrentPage={props.setCurrentPage}

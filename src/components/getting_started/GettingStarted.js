@@ -1,10 +1,10 @@
-import { Breadcrumbs } from "react-daisyui";
+import { Button } from "react-daisyui";
 import Card from "../Card";
 import CollapseTab from "./CollapseTab";
 
 function GettingStarted(props) {
     return (
-        <div className="mx-8 my-8 pb-8 w-1/2 ml-auto mr-auto">
+        <div className="mx-8 my-8 pb-8 lg:w-1/2 w-96 ml-auto mr-auto">
             <Card 
                 content={
                 <div>
@@ -49,11 +49,30 @@ function GettingStarted(props) {
                         content={
                             <div>
                                 <p>For code examples and documentation, visit the modules page on this site.</p>
-                                <div className="flex justify-center py-4">
+                                <div className="flex justify-center py-2">
                                 </div>
                             </div>
                         }
                     />
+                    <div className="flex justify-center my-6">
+                        <div className="inline mx-4">
+                            <Button 
+                                className="bg-cyan-500 border-cyan-500 hover:bg-cyan-700 hover:border-cyan-700 text-white"
+                                onClick={() => props.setCurrentPage("Modules")}
+                            >
+                                View the Docs
+                            </Button>
+                        </div>
+                        <div className="inline mx-4">
+                            <Button 
+                                className="bg-cyan-500 border-cyan-500 hover:bg-cyan-700 hover:border-cyan-700 text-white"
+                                onClick={() => props.setCurrentPage("Setup")}
+                            >
+                                Tufts EN 1 Hub Setup
+                            </Button>
+                        </div>
+                    
+                    </div>
                 </div>
                 }
             />

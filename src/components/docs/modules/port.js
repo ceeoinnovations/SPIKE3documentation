@@ -36,7 +36,6 @@ port.port_setPower(port.PORTA, 5000)`
 # Color Sensor
 # Returns: (LEGO Color Code, Percent Reflected, Red Value, Green Value, Blue Value, Intensity, 0, 0)
 
-# Color Sensor
 import port
 port.port_getSensor(port.PORTA)`
             },
@@ -53,15 +52,15 @@ port.port_getSensor(port.PORTA)`
 
 # Return Values:
 devices = {
-    mediumMotor: 48,
-    colorSensor: 61,
-    distanceSensor: 62,
-    forceSensor: 63,
-    noDevice: 255
+    "mediumMotor": 48,
+    "colorSensor": 61,
+    "distanceSensor": 62,
+    "forceSensor": 63,
+    "noDevice": 255
 }
 
 # Checks if a motor is plugged into Port A
-print(port.port_getDevice(port.PORTA) == devices.mediumMotor)`
+print(port.port_getDevice(port.PORTA) == devices["mediumMotor"])`
             },
 
             {
@@ -77,7 +76,23 @@ import port
 port.port_waitAttached(port.PORTA)
 print("Something is plugged into Port A!")`
             }
-        ]
+        ],
+
+    constants: [
+        "TIMEOUT_NEVER -- -1",
+
+        "PORTA -- 0",
+
+        "PORTB -- 1",
+
+        "PORTC -- 2",
+
+        "PORTD -- 3",
+
+        "PORTE -- 4",
+
+        "PORTF -- 5"
+    ]
 }
 
 export default port;

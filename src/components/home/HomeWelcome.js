@@ -1,7 +1,7 @@
 import {Hero, Button} from "react-daisyui";
 function HomeWelcome(props) {
     return (
-        <div className="flex justify-center p-14">
+        <div className="flex justify-center p-14 z-0">
             <Hero>
                 <Hero.Overlay className="bg-opacity-60" />
                 <Hero.Content className="text-center">
@@ -12,7 +12,7 @@ function HomeWelcome(props) {
                     </p>
 
                     <div className="grid grid-cols-2">
-                        <div>
+                        <div className="mx-2">
                             <Button 
                                 className="bg-cyan-500 border-cyan-500 hover:bg-cyan-700 hover:border-cyan-700 text-white"
                                 onClick={() => props.setCurrentPage("GettingStarted")}
@@ -20,7 +20,7 @@ function HomeWelcome(props) {
                                 Getting Started
                             </Button>
                         </div>
-                        <div>
+                        <div className="mx-2">
                             <Button 
                                 className="bg-cyan-500 border-cyan-500 hover:bg-cyan-700 hover:border-cyan-700 text-white"
                                 onClick={() => props.setCurrentPage("Modules")}
@@ -30,8 +30,10 @@ function HomeWelcome(props) {
                         </div>
                         
                     </div>
-                    
+                
                     </div>
+
+                    
                 </Hero.Content>
             </Hero>
         </div>

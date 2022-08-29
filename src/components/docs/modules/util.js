@@ -39,7 +39,9 @@ util.run(main())
         },
 
 
-    ]
+    ],
+
+    constants: []
 }
 
 export default util;

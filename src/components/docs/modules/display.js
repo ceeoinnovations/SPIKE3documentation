@@ -142,7 +142,13 @@ display.display_show_image("Some Image")`
 
 
 
-        ]
+        ],
+
+    constants: [
+        "DISPLAY_SHOWING -- 0",
+        "DISPLAY_SUCCESS -- 1",
+        "DISPLAY_ABORTED -- 2"
+    ]
 }
 
 export default display;

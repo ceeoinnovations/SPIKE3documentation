@@ -24,7 +24,7 @@ color_matrix.get_pixel(1, 2, 2)`
                 parametersDescription: ["Integer representing port on hub. Use portmodule.", "The horizontal position of the pixel to light up", "The vertical position of the pixel to light up", "What color to show in the LED. See Color sensor for colors.", "How bright should the LED light up"],
                 description: "Set a color on a specific pixel with a given brightness.",
                 returns: "Nothing",
-                code: `import color_matrix
+                code: `import color_matrix, port
 Set the center pixel to red with max brightness
 color_matrix.set_pixel(port.PORTA, 1,1, LEGO_RED, 10)`
 
@@ -38,7 +38,7 @@ color_matrix.set_pixel(port.PORTA, 1,1, LEGO_RED, 10)`
                 parametersDescription: ["Integer representing port on hub. Use portmodule.", "A byte list with information about how to light up each pixel."],
                 description: "Set all pixels on a color matrix at once.",
                 returns: "Nothing",
-                code: `import color_matrix
+                code: `import color_matrix, port
 # Light up all pixels in RED with max brightness
 brightness = 10
 color = LEGO_RED
@@ -64,7 +64,9 @@ color_matrix.clear(port.PORTA)`
             },
 
 
-        ]
+        ],
+
+        constants: []
 
 }
 

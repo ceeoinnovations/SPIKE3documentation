@@ -155,7 +155,8 @@ drivebase.drivebase_stop(0)
                 parametersDescription: ["DRIVEBASE1 -- 0, DRIVEBASE2 -- 1, DRIVEBASE3 -- 2"],
                 description: "Stops drivebase motors",
                 returns: "Nothing",
-                code: ``
+                code: `import drivebase
+drivebase.drivebase_stop(0)`
             },
 
             
@@ -314,52 +315,25 @@ print(drivebase.drivebase_get_wheel_diameter(0))`
 drivebase.drivebase_init(0, port.PORTA, port.PORTB)
                                 
 print(drivebase.drivebase_get_axle_track(0))`
-            },
+            }],
 
-            {
-                functionName: "drivebase_set_wheel_diameter",
-                status: "text-blue-500",
-                parameters: ["drivebase_id"],
-                parametersTypes:["Integer (0-2)"],
-                parametersDescription: ["DRIVEBASE1 -- 0, DRIVEBASE2 -- 1, DRIVEBASE3 -- 2"],
-                description: "Change wheel diameter (steering mode)",
-                returns: "Nothing",
-                code: ``
-            },
+    constants: [
+        "DRIVEBASE1 -- 0",
 
-            {
-                functionName: "drivebase_set_wheel_diameter",
-                status: "text-blue-500",
-                parameters: ["drivebase_id"],
-                parametersTypes:["Integer (0-2)"],
-                parametersDescription: ["DRIVEBASE1 -- 0, DRIVEBASE2 -- 1, DRIVEBASE3 -- 2"],
-                description: "Change wheel diameter (steering mode)",
-                returns: "Nothing",
-                code: ``
-            },
+        "DRIVEBASE2 -- 1",
 
-            {
-                functionName: "drivebase_set_wheel_diameter",
-                status: "text-blue-500",
-                parameters: ["drivebase_id"],
-                parametersTypes:["Integer (0-2)"],
-                parametersDescription: ["DRIVEBASE1 -- 0, DRIVEBASE2 -- 1, DRIVEBASE3 -- 2"],
-                description: "Change wheel diameter (steering mode)",
-                returns: "Nothing",
-                code: ``
-            },
+        "DRIVEBASE3 -- 2",
 
-            {
-                functionName: "drivebase_set_wheel_diameter",
-                status: "text-blue-500",
-                parameters: ["drivebase_id"],
-                parametersTypes:["Integer (0-2)"],
-                parametersDescription: ["DRIVEBASE1 -- 0, DRIVEBASE2 -- 1, DRIVEBASE3 -- 2"],
-                description: "Change wheel diameter (steering mode)",
-                returns: "Nothing",
-                code: ``
-            },
-        ]
+        "DRIVEBASE_END_STATE_COAST -- 0",
+
+        "DRIVEBASE_END_STATE_BRAKE -- 1",
+
+        "DRIVEBASE_END_STATE_HOLD -- 2",
+
+        "DRIVEBASE_END_STATE_CONTINUE -- 3",
+
+        "DRIVEBASE_END_STATE_SMART_COAST -- 4"
+    ]
 }
 
 export default drivebase;

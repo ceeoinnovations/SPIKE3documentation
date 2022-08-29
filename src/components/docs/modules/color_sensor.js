@@ -55,10 +55,12 @@ color_sensor.get_reflection(port.PORTC)`
             returns: "A tuple value with the RGBI value (Red, Green, Blue, Intensity).",
             code: `import color_sensor, port
 
-ccolor_sensor.get_rgbi(port.PORTC)`
+color_sensor.get_rgbi(port.PORTC)`
         },
 
-    ]
+    ],
+
+    constants: []
 }
 
 export default color_sensor;

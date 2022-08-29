@@ -18,6 +18,8 @@ function ModulesMenu(props) {
             <ModuleDocs
                 setCurrentPage={props.setCurrentPage} 
                 currentPage={props.currentPage}
+                writeToPort={props.writeToPort}
+                getConsole={props.getConsole}
             />
         )
     }

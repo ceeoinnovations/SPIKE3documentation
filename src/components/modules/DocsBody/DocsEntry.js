@@ -3,6 +3,13 @@ import {generateCodeBox, getParametersInfoArray} from "./entryFuncts";
 
 function DocsEntry(props) {
     const [copiedCode, setCopiedCode] = useState(false);
+    const [runCode, setRunCode] = useState(false);
+    const [fullCode, setFullCode] = useState(false);
+
+    //const [displayedCode, setDisplayedCode] = useState()
+
+    const [currentConsole, setCurrentConsole] = useState([]);
+
 
     let titleColor = "text-blue-500";
     if (props.function.status !== undefined) {
@@ -43,7 +50,7 @@ function DocsEntry(props) {
 
             <div className="my-6">{
                 props.function.returns.split("\n").map((element, index) => {
-                    if (index == 0) {
+                    if (index === 0) {
                         return (
                         <div>
                             <p>{"Returns: " + element}</p>
@@ -72,14 +79,62 @@ function DocsEntry(props) {
                         <p>{copiedCode ? "Copied to Clipboard" : "Copy Code"}</p>
                     </button>
                 </div>
+
+                <div className="inline">
+                    <button 
+                    className={runCode ? "btn btn-xs btn-accent mr-4 text-white" : "btn btn-xs mr-4"}
+                    onClick={() => {
+                        setRunCode(true);
+                        setTimeout(() => {
+                            setRunCode(false);
+                        }, 2000);
+
+                        //props.writeToPort(props.function.code.split("\x05"));
+                        props.writeToPort(props.function.code.split("\n"));
+                        //props.writeToPort(props.function.code.split("\x04"));
+
+                        setTimeout(() => {
+                            setCurrentConsole(() => {
+                                console.log(props.getConsole)
+                                return ([props.getConsole.split("\n").slice(-2)[0]])
+                            })
+                        }, 500);
+                        
+                    }}
+                    >
+                        <p>{runCode ? "Running Code" : "Run Code"}</p>
+                    </button>
+                </div>
                 
-                <button 
-                    className="btn btn-xs mr-4"
-                    onClick={() => window.open("https://pyrepl.web.app", '_blank')}
-                >Open In PyREPL</button>
+                {/*
+                <div className="inline">
+                    <button 
+                    className={"btn btn-xs mr-4"}
+                    onClick={() => {
+                        setFullCode((prev) => {
+                            return !prev;
+                        });
+                        if (props.function.fullCode) {
+                            console.log("Full code is here!")
+                        }
+                    }}
+                    >
+                        <p>{fullCode ? "Code Snippet" : "Full Code"}</p>
+                    </button>
+                </div>
+                */}
+                
+                
             </div>
             <div className="mockup-code mt-1">
                 {generateCodeBox(props.function.code)}
+            </div>
+            <div>
+                {currentConsole.map((element, index) => {
+                    return (
+                        <p key={index}>{element}</p>
+                    )
+                })}
             </div>
             
 

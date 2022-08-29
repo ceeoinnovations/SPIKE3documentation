@@ -175,6 +175,22 @@ imu.zeroOrientation()`
 
 imu.setYawValue(90)`
         }
+    ],
+
+    constants: [
+        "HUB_FACE_TOP -- 0",
+
+        "HUB_FACE_FRONT -- 1",
+
+        "HUB_FACE_RIGHT -- 2",
+
+        "HUB_FACE_BOTTOM -- 3",
+
+        "HUB_FACE_BACK -- 4",
+
+        "HUB_FACE_LEFT -- 5",
+
+        "HUB_FACES -- 6"
     ]
 }
 

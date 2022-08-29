@@ -18,6 +18,7 @@ function IndividualEntry(props) {
         <div className="mx-4 my-2">
             <h1 className="text-blue-500 text-xl font-semibold cursor-pointer"
             >{functionObject.functionName + "(" + functionObject.parameters.toString().replaceAll(',', ', ') + ")"}</h1>
+
             <p className="my-6">{functionObject.description}</p>
 
             <div className="overflow-x-auto mt-3">
@@ -60,10 +61,6 @@ function IndividualEntry(props) {
                     </button>
                 </div>
                 
-                <button 
-                    className="btn btn-xs mr-4"
-                    onClick={() => window.open("https://pyrepl.web.app", '_blank')}
-                >Open In PyREPL</button>
             </div>
             <div className="mockup-code mt-1">
                 {generateCodeBox(functionObject.code)}

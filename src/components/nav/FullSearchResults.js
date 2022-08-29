@@ -74,13 +74,13 @@ function FullSearchResults(props) {
             )
         }
         return (
-            <div className="btn-group btn-group-vertical z-40">
+            <div className="btn-group btn-group-vertical">
                 {results.map((element, index) => {
                     if (index < 4) {
                         return (
-                        <div key={index} className={index === 0 ? "" : ""}>
+                        <div key={index} className={index === 0 ? "z-20" : "z-20"}>
                             <button 
-                                className="btn"
+                                className="btn z-20"
                                 onClick={() => {
                                     props.setCurrentPage(element.link)
                                     props.setQuery("")
@@ -89,6 +89,18 @@ function FullSearchResults(props) {
                                 {element.value}
                             </button>
                         </div>)
+                    }
+                    if (index === 5) {
+                        return (
+                            <div key={index} className={"z-20"}>
+                                <button 
+                                    className="btn z-20"
+                                    onClick={() => { }}
+                                >
+                                    {"More Results..."}
+                                </button>
+                            </div>
+                        )
                     }
                     
                 })}
